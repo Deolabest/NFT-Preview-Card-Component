@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+:root {
+    --p-blue: hsl(215, 51%, 70%);
+    --p-cyan: hsl(178, 100%, 50%);
+    
+    --n-main-bg: hsl(217, 54%, 11%);
+    --n-card-bg: hsl(216, 50%, 16%);
+    --n-line: hsl(215, 32%, 27%);
+    --n-white: hsl(0, 0%, 100%);
+    --n-l-w: hsl(215, 18%, 50%);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--n-main-bg);
+    flex-direction: column;
+}
+
+.container {
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border-radius: 25px;
+    background-color: var(--n-card-bg);
+    height: 550px;
+    box-shadow: 5px 10px 15px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nftimage {
+    height: 250px;
+    width: 270px;
+    background: url(images/image-equilibrium.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.icon-eye {
+    opacity: 0;  
+}
+
+.nftimage:hover {
+    box-shadow: 0 250px #00fff780 inset;
+}
+
+.nftimage:hover>.icon-eye {
+    opacity: 1;
+    transition: 0.2s;
+}
+
+h1 {
+    font-size: 1.2rem;
+    font-weight: 600px;
+    padding-top: 32px;
+    color: var(--n-white);
+    cursor: pointer;
+}
+
+h1:hover {
+    color: var(--p-cyan);
+}
+
+.desc {
+    font-size: 1rem;
+    font-weight: 400px;
+    padding-top: 10px;
+    color: var(--n-l-w);
+}
+
+.priceduration {
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price,
+.duration {
+    font-size: 1rem;
+    display: flex;
+    gap: 7px;
+}
+
+.price {
+    color: var(--p-cyan);
+}
+
+.price:hover img {
+    transform: rotate(180deg);
+    transition: 0.2s;
+}
+
+.duration {
+    color: var(--n-l-w);
+}
+
+.duration:hover img {
+    transform: rotate(720deg);
+    transition: 0.2s;
+}
+
+.line {
+    height: 1px;
+    display: flex;
+    background-color: var(--n-line);
+    width: auto;
+    margin-top: 20px;
+}
+
+.creator {
+    display: flex;
+    width: auto;
+    padding-top: 15px;
+    gap: 20px;
+    align-items: center;
+    color: var(--n-l-w);
+}
+
+
+.creator img {
+    width: 40px;
+    border-radius: 50px;
+    border: 1px solid var(--n-white);
+}
+
+.creatoredit {
+    color: var(--n-white);
+    cursor: pointer;
+}
+
+.creatoredit:hover {
+    color: var(--p-cyan);
+}
+
+@media (max-width: 375px) {
+    .container {
+        width: 100%;
+        
+    }
+}
